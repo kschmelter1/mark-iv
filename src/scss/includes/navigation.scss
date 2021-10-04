@@ -1,0 +1,12 @@
+.navbar-nav {
+  .nav-item {
+    .nav-link {
+      @extend %transition;
+      @extend %link;
+      &:hover, &:focus {
+        outline: 0;
+      }
+    }
+  }
+
+}

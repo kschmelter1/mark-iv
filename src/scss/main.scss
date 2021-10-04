@@ -1,0 +1,31 @@
+body {
+  @extend %body_font;
+  background-image: url('img/mark4tile.jpg');
+}
+
+.container-fluid {
+  padding-left: $cf-padding;
+  padding-right: $cf-padding;
+}
+
+.logo-svg {
+  height: 100%;
+  //width: 100%;
+  flex: 0 0 50%;
+  position: relative;
+  .cls-1{fill:#023a59;}
+  .cls-2{fill:#fe4d02;}
+}
+
+.btn-lg {
+  margin-top: 1rem;
+  font-size: 1.35rem;
+  padding: .75rem 3rem;
+  border-radius: .5rem;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: calc(-110px - 2rem );
+  visibility: hidden; }

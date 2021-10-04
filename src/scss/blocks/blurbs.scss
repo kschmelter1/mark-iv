@@ -1,0 +1,47 @@
+.block-blurbs {
+  .single-blurb {
+    font-size: 1.2rem;
+    @include media-breakpoint-down(md) {
+      display: flex;
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      font-size: 1rem;
+    }
+    .img-wrap {
+      @extend %img-border;
+      margin-bottom: 1.5rem;
+      position: relative;
+      overflow: hidden;
+      padding-top: 70%;
+      @include media-breakpoint-down(md) {
+        padding-top: 30%;
+        flex: 0 0 calc(50% - 1.5rem);
+        margin-right: 1.5rem;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-right: 0;
+        padding-top: 60%;
+      }
+      img {
+        @extend %pos-cover;
+        @include object-fit(cover);
+        height: 100%; width: 100%;
+      }
+    }
+    .h3 {
+      margin-bottom: 1rem;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: .5rem;
+      }
+    }
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.block-image-banner {
+  .img-wrap {
+    position: relative;
+    padding-top: 30%;
+    @extend %img-border;
+    overflow: hidden;
+    @include media-breakpoint-down(md) {
+      padding-top: 50%;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-top: 70%;
+    }
+    img {
+      @extend %pos-cover;
+      @include object-fit(cover);
+      height: 100%; width: 100%;
+    }
+  }
+}

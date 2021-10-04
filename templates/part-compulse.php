@@ -1,0 +1,1 @@
+<div class="copyright"><span>&copy; <?php echo date('Y'); ?> <a href="/"><?php echo get_bloginfo('sitename');?></a></span> <span class="divider">•</span> <span class="credit">Designed by <a href="https://compulse.com/" target="_blank">Compulse Integrated Marketing</a>.</span></div>

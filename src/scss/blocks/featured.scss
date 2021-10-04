@@ -1,0 +1,50 @@
+.block-featured {
+  h2 {
+    margin-bottom: 1rem;
+  }
+  .single-featured {
+    @extend %location-link;
+    &.coming-soon {
+      .wrapper {
+      /*  .text {
+          bottom: 50%;
+          transform: translateY(50%);
+        }*/
+        /*&:hover, &:focus {
+          border-color: #5a5a5a;
+          cursor: default;
+          color: #fff;
+        }*/
+        &::after {
+          top: 0;
+          background: rgba(0,0,0,.6);
+          @include media-breakpoint-down(sm) {
+            background: rgba(0,0,0,.75);
+          }
+        }
+      }
+      .coming-soon-title {
+        position: absolute;
+        top: 50%; left: 0; right: 0;
+        text-align: center;
+        transform: translateY(-50%);
+        z-index: 10;
+        @extend %location-title;
+      }
+    }
+  }
+  .swiper-container {
+    @include media-breakpoint-down(sm) {
+    margin-left: calc(#{$cf-padding} * -1);
+    //margin-left: -5px;
+      margin-right: calc(#{$cf-padding} * -1);
+    }
+    .swiper-slide {
+      @include media-breakpoint-down(sm) {
+        width: calc(75vw - #{$cf-padding} - #{$cf-padding});
+        //padding: 0 10px;
+        padding: 0;
+      }
+    }
+  }
+}

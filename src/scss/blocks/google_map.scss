@@ -1,0 +1,109 @@
+.block-google-map {
+  .row > div {
+    @include media-breakpoint-down(xl) {
+      &:not(:last-child) {
+          margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+.map-btn {
+  display: flex;
+  border-radius: .5rem;
+  overflow: hidden;
+  background-color: $primary;
+  @extend %transition;
+  &:hover, &.active {
+    background-color: darken($primary, 5%);
+  }
+  .img-wrap {
+    flex: 0 0 35%;
+    position: relative;
+    img {
+      @extend %pos-cover;
+      height: 100%; width: 100%;
+      @include object-fit(cover);
+    }
+  }
+  .content {
+    color: #fff;
+    padding: 1.25rem;
+      &-title {
+        font-weight: 700;
+        font-size: 2rem;
+        @include media-breakpoint-down(xxl) {
+          font-size: 1.5rem;
+        }
+      }
+      &-subtitle {
+        display: flex;
+        flex-wrap: wrap;
+        span {
+          opacity: .5;
+          font-size: 1.2rem;
+          &:not(:last-child) {
+            margin-right: .5rem;
+          }
+        }
+      }
+    @include media-breakpoint-down(sm) {
+      padding: .75rem 1rem;
+      &-title {
+        font-size: 1.25rem;
+      }
+      &-subtitle {
+        span {
+          opacity: .75;
+          font-size: .85rem;
+        }
+      }
+    }
+  }
+}
+#map-btn-live {
+  background-color: $secondary;
+  &:hover, &.active {
+    background-color: darken($secondary, 10%);
+  }
+}
+#map-btn-play {
+  background-color: $m4_green;
+  &:hover, &.active {
+    background-color: darken($m4_green, 10%);
+  }
+}
+
+#g-map-wrap {
+  display: none;
+  &.active {
+    display: block;
+    height: 550px;
+    margin-top: 2rem;
+    border-radius: .5rem;
+    overflow: hidden;
+  }
+  .gmap-info {
+    font-family: museo, serif;
+    color: $m4_grey;
+    font-size: 1.25rem;
+    padding: 1.25rem;
+    &-title {
+      @extend %h2;
+      margin-bottom: 1rem;
+      line-height: 1;
+      font-size: 1.5rem;
+    }
+    &-address {
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    &-link {
+      color: $m4_orange;
+      transition: color .5s ease;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}

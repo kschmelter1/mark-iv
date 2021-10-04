@@ -1,0 +1,55 @@
+@import "hero_slider";
+@import "image_banner";
+@import "blurbs";
+@import "careers";
+@import "map_embed";
+@import "featured";
+@import "cta";
+@import "google_map";
+
+.block {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  @include media-breakpoint-down(sm) {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+.guten-block {
+  font-size: 1.2rem;
+  @include media-breakpoint-down(sm) {
+    font-size: 1rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+    @include media-breakpoint-down(sm) {
+      font-size: 1.5rem;
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: 1.25rem;
+    }
+  }
+  a {
+    @extend %transition;
+    &:hover {color: $secondary;}
+  }
+}
+.wp-block-quote {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  border-bottom: solid 3px #fff;
+  line-height: 1.1;
+  @include media-breakpoint-down(lg) {
+    font-size: 1.25rem;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+}

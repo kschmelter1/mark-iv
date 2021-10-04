@@ -1,0 +1,79 @@
+.block-cta {
+  background-color: $primary;
+  font-size: 1.25rem;
+  padding: 10rem 0;
+  position: relative;
+  overflow: hidden;
+  @include media-breakpoint-down(xs) {
+    padding: 6rem 0;
+  }
+  & > div {
+    position: relative;
+    z-index: 5;
+  }
+  h2 {
+    font-size: 4.5rem;
+    font-weight: 300;
+    @include media-breakpoint-down(xxl) {
+      font-size: 3.5rem;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 2.75rem;
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: 1.75rem;
+    }
+  }
+  svg {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    path {
+      opacity: 0;
+      transition: opacity 1.25s ease-in-out;
+      &.on {
+        opacity: 1;
+        &:nth-child(2) {
+          opacity: 0.8;
+        }
+        &:nth-child(3) {
+          opacity: 0.6;
+        }
+        &:nth-child(4) {
+          opacity: 0.4;
+        }
+        &:nth-child(5) {
+          opacity: 0.2;
+        }
+      }
+      @include ie-only {
+        opacity: 1;
+        &:nth-child(2) {
+          opacity: 0.8;
+        }
+        &:nth-child(3) {
+          opacity: 0.6;
+        }
+        &:nth-child(4) {
+          opacity: 0.4;
+        }
+        &:nth-child(5) {
+          opacity: 0.2;
+        }
+      }
+    }
+  }
+  .btn {
+    font-weight: 900;
+    padding: 1.25rem 3rem;
+    font-size: 1.5rem;
+    @include media-breakpoint-down(sm) {
+      font-size: .85rem;
+      padding: .75rem 1.25rem;
+    }
+    @include media-breakpoint-down(xs) {
+      padding: .5rem 1rem;
+    }
+  }
+}

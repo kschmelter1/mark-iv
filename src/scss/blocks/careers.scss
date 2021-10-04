@@ -1,0 +1,36 @@
+.block-careers {
+  .single-career {
+    display: block;
+    @extend %img-border;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    transition: border-color .25s ease;
+    &:hover {
+      color: #fff;
+      border-color: $secondary;
+    }
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 1rem;
+    }
+    &-title {
+      text-transform: uppercase;
+    }
+    &-location {
+      font-size: 1rem;
+    }
+    .btn {
+      @include media-breakpoint-up(lg) {
+        margin-top: 0;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: 1.15rem;
+        padding: .5rem 2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+#wpadminbar #wp-admin-bar-new_draft > .ab-item {
+  display: none !important;
+}
+#wpadminbar .ab-icon {
+  &.dashicons-chart-bar {
+    display: none !important;
+  }
+}
+
+.btn-lg {
+  @include media-breakpoint-down(xs) {
+    padding: .5rem 1.5rem;
+    width: 100%;
+    font-size: 1.25rem;
+  }
+}

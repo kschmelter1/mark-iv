@@ -1,0 +1,100 @@
+.block-hero-slider {
+  .swiper {
+    &-slide {
+      position: relative;
+      height: calc(100vh - 3rem);
+      @include media-breakpoint-down(lg) {
+        height: 85vh;
+      }
+      img {
+        @extend %pos-cover;
+        @include object-fit(cover);
+        height: 100%;
+        width: 100%;
+      }
+      &-caption {
+        position: absolute;
+        bottom: 0;
+        right: $cf-padding;
+        z-index: 5;
+        width: 26rem;
+          background-color: #fff;
+          color: $mid;
+          padding: 1.5rem 2rem 1.5rem 1rem;
+          text-align: right;
+          &:before {
+            @extend %pseudo;
+            top: 0; bottom:0;
+            background-color: #fff;
+            transform: skew(-15deg);
+            width: 4rem;
+            left: -1rem;
+            z-index: -1;
+          }
+        @include media-breakpoint-down(sm) {
+          height: 58px;
+          font-size: .75rem;
+          width: 80vw;
+          padding: 0 1.5rem 0 .5rem;
+          right: 0;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+        }
+      }
+    } // -slide
+
+    &-pagination {
+      position: relative;
+      height: 1.5rem;
+      &-wrapper {
+        position: absolute;
+        bottom: 0;
+        right: calc(#{$cf-padding} + 29rem);
+        height: 4.5rem;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        @include media-breakpoint-down(sm) {
+          bottom: 58px;
+          right: 1.5rem;
+          left: 1.5rem;
+          justify-content: flex-end;
+          height: 3rem;
+        }
+      }
+      &-bullet {
+        background: rgba(0,0,0,.2);
+        border: solid 1px #fff;
+        height: .75rem;
+        width: .75rem;
+        box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.5);
+        margin: .25rem;
+        opacity: 1;
+        transform: scale(1) !important;
+        @extend %transition;
+        @include media-breakpoint-down(sm) {
+          height: 1rem;
+          width: 1rem;
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+        }
+        &-active {
+          background-color: #fff;
+        }
+      }
+    } // -pagination
+
+  }
+
+  .embed-wrapper {
+    @extend %pos-cover;
+    iframe {
+      @extend %pos-cover;
+      height: 100%;
+      width: 100%;
+    }
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+}
